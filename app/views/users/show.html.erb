@@ -1,4 +1,8 @@
-<h1>
+<h1 class="profile-head">
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+<ul class="list-group">
+ <li class="list-group-item"><%= @user.email %></li>
+ <li class="list-group-item"><%= @user.location%></li>
+</ul>
