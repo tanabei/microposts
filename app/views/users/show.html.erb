@@ -6,6 +6,10 @@
       <%= @user.name %>
     </h1>
   </section>
+  <ul class="list-group">
+   <li class="list-group-item"><%= @user.email %></li>
+   <li class="list-group-item"><%= @user.location%></li>
+  </ul>
  </aside>
  <div class="col-md-8">
   <% if @user.microposts.any? %>
