@@ -1,0 +1,10 @@
+<section class="user_info">
+  <h1>
+    <%= gravatar_for @user %>
+    <%= link_to @user.name, @user %>
+  </h1>
+  <ul style="list-style: none;">
+    <li><%= link_to "Following", followings_user_path(@user) %></li>
+    <li><%= link_to "Follower", followers_user_path(@user) %></li>
+  </ul>
+</section>
