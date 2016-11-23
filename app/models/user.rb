@@ -29,8 +29,7 @@ class User < ActiveRecord::Base
     following_users.include?(other_user)
   end
   
-  def feed
-     Micropost.where("user_id IN (:following_ids) OR user_id = :user_id",
-                    following_ids: following_ids, user_id: id)
+  def feed_items
+     Micropost.where(user_id: following_user_ids + [self.id])
   end
 end
